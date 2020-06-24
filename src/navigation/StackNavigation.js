@@ -9,9 +9,10 @@ import Search from "../screens/Search";
 
 const Stack = createStackNavigator();
 
-export default function StackNavigation() {
+export default function StackNavigation(props) {
+  const { navigation } = props;
   const buttonLeft = () => {
-    return <IconButton icon="menu" onPress={() => console.log("its open")} />;
+    return <IconButton icon="menu" onPress={() => navigation.openDrawer()} />;
   };
 
   return (

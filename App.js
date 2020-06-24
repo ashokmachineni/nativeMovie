@@ -1,6 +1,11 @@
+import "react-native-gesture-handler";
 import React from "react";
 import { StyleSheet, Text, View, SafeAreaView } from "react-native";
-import { Provider as PaperProvider } from "react-native-paper";
+import {
+  Provider as PaperProvider,
+  DarkTheme,
+  DefaultTheme
+} from "react-native-paper";
 import { NavigationContainer } from "@react-navigation/native";
 import Navigation from "./src/navigation/Navigation";
 
@@ -13,12 +18,3 @@ export default function App() {
     </PaperProvider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center"
-  }
-});

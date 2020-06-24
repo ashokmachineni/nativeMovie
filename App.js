@@ -1,6 +1,12 @@
-import "react-native-gesture-handler";
 import React, { useMemo, useState } from "react";
-import { StyleSheet, Text, View, SafeAreaView, StatusBar } from "react-native";
+import {
+  StyleSheet,
+  Text,
+  View,
+  SafeAreaView,
+  StatusBar,
+  YellowBox
+} from "react-native";
 import {
   Provider as PaperProvider,
   DarkTheme as DarkThemePaper,
@@ -14,6 +20,7 @@ import {
 import Navigation from "./src/navigation/Navigation";
 import PreferencesContext from "./src/context/PreferencesContext";
 
+YellowBox.ignoreWarnings(["Calling `getNode()`"]);
 export default function App() {
   const [theme, setTheme] = useState("dark");
   DefaultThemePaper.colors.primary = "#1ae1f2";

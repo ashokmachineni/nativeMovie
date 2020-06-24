@@ -26,6 +26,11 @@ export default function DrawerContent(props) {
           onPress={() => onChangeScreen("popular")}
         />
         <Drawer.Item
+          active={active === "movie"}
+          label="Movies"
+          onPress={() => onChangeScreen("movie")}
+        />
+        <Drawer.Item
           active={active === "news"}
           label="New Releases"
           onPress={() => onChangeScreen("news")}
